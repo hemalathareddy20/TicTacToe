@@ -1,29 +1,29 @@
 import java.util.Scanner;
 public class TicTacToe {
-
+   String player;
+   String computer;
    public static void main(String[] args){
           System.out.println("Welcome to TicTacToe program");
           char[] board = createBoard();
-          assignBoard();
- }
+          TicTacToe choiceBoard=new TicTacToe();
+          choiceBoard.assignBoard();
+   }
 
    public static char[] createBoard() {
           char[] board=new char[10];
-   for(int i=1;i<=10;i++){
+          for(int i=0;i<10;i++){
              board[i]= ' ';
+          }
+          return board;
    }
-     return board;
-}
-   public static String assignBoard() {
-        String player;
-        String computer;
-      	Scanner s=new Scanner(System.in);
+   public String assignBoard() {
+      	Scanner input=new Scanner(System.in);
         System.out.println("enter ur choice 0 or x");
-        player=s.next();
+        player=input.next();
         if(player=="0")
-             computer="0";
-        else
              computer="x";
+        else
+             computer="0";
            return player;
-  }
+   }
 }
